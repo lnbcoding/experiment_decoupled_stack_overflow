@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Decoupled DBC Overflow
 
 ### Learning Competencies
@@ -30,3 +31,7 @@ If time allows, consider adding authentication to your app. Keep in mind that, s
 The following resource should come in handy:
 
 [AJAX Patterns - Direct Login](http://ajaxpatterns.org/Direct_Login)
+=======
+# experiment_decoupled_stack_overflow
+playing around and experimenting with decoupling for a stack overflow clone
+>>>>>>> 1b879ad6385df2595aad4c30b52d0ba007057952
