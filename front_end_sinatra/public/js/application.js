@@ -1,7 +1,22 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    // Get All Question using Ajax and rendering Client Side
+    $.ajax({
+        url: 'http://localhost:3000/questions',
+        type: 'GET',
+    }).done(function(serverResponse) {
+        // iterate over the array of Objects and display the title and content
+        for (var i = 0; i < serverResponse.length; i ++) {
+            $("table.each-question-index").append('<tr><td>' + serverResponse[i].title + '</td> <td> ' + serverResponse[i].content + ' </td></tr>');
+        }
+    });
+
+    // Get One Question using Ajax and rendering Client Side
+    $.ajax({
+        url: 'http://localhost:3000/questions',
+        type: 'GET',
+    }).done(function(serverResponse) {
+        $("table.one-question").append('<tr><td>' + serverResponse.title + '</td> <td> ' + serverResponse.content + ' </td></tr>');
+    });
+
 });
